@@ -21,4 +21,3 @@ for i in range(4):
     maior = Max(maior, n4)
     
     print(f"O maior número é: {maior}")
-    break

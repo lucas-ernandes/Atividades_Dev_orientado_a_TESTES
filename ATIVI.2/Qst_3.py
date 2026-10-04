@@ -3,15 +3,23 @@ Questão 3:Faça um programa que dada uma seqüência de n números, imprimi-la 
 leitura.
 '''
 
-max_list = 4
-l = list(range(max_list))
-qtd = 0
+n = int(input("Digite a sequencia de numeros desejados: "))
+l = list(range(n))
 
-for i in range(max_list):
-    l[i] = int(input("Digite uma sequencia de numeros: "))
-    qtd += l[i]
+def lista_normal():
+    for i in range(n):
+        l[i] = int(input("Digite uma sequencia de numeros: "))
+    return l
 
-inverter = l[::-1]
+def lista_inverti():
+    l2 = []
+    for x in range(n-1, -1, -1):
+        l2.append(l[x])
+        
+    return l2
 
-print(f"Lista: {l}")
-print(f"Lista invertida: {inverter}")
+resultado = lista_normal()
+resultado2 = lista_inverti()
+
+print(f"Lista: {resultado}")
+print(f"Lista invertida: {resultado2}")
