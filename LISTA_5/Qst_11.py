@@ -8,7 +8,7 @@ assert maior_lista([-5, -2, -9]) == -2
 
 def maior_lista(numeros):
     for i in numeros:
-        if type(i) == str:
+        if type(i) != int:
             return Exception
     
     maior = numeros[0]
@@ -21,6 +21,8 @@ def maior_lista(numeros):
 assert maior_lista([3, 8, 2, 10]) == 10
 assert maior_lista([-5, 2, -9]) == 2
 assert maior_lista([2, 'sla', 2.3, 5]) == Exception
+assert maior_lista([2, '', 2.9, 10]) == Exception
+assert maior_lista([-909, 0, -1, -5]) == 0
 
 print("Testes OK!!")
 
